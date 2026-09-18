@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+<script src="./support.js"></script>
+<template id="__bundler_thumbnail" data-bg-color="#0B1F3A">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#0B1F3A"/>
+    <circle cx="600" cy="360" r="210" fill="#6C4DFF" opacity="0.35"/>
+    <circle cx="600" cy="360" r="110" fill="#6C4DFF"/>
+    <text x="600" y="640" fill="#ffffff" font-family="Inter, Helvetica, sans-serif" font-size="150" font-weight="600" letter-spacing="22" text-anchor="middle">TESK</text>
+  </svg>
+</template>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@200;300&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  html, body { margin: 0; padding: 0; background: #ffffff; }
+  body { font-family: 'Noto Sans JP', 'Inter', sans-serif; color: #1A1A1A; -webkit-font-smoothing: antialiased; text-wrap: pretty; }
+  * { box-sizing: border-box; }
+  a { color: #6C4DFF; text-decoration: none; }
+  a:hover { color: #4A2FD6; }
+  input, select, textarea, button { font-family: inherit; }
+  @keyframes tskUp { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+  @keyframes tskReveal { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+  @keyframes tskGlow { 0%, 100% { opacity: .55; } 50% { opacity: .85; } }
+</style>
+</helmet>
+
+<div style="background: #ffffff">
+
+  <header style="position: fixed; top: 0; left: 0; right: 0; z-index: 50; background: rgba(255,255,255,0.92); backdrop-filter: blur(12px); borderBottom: 1px solid #E3E7ED">
+    <div style="maxWidth: 1240px; margin: 0 auto; padding: 0 24px; height: 68px; display: flex; align-items: center; gap: 32px">
+      <a href="#top" onClick="{{ goHome }}" style="font-family: 'Inter', sans-serif; font-size: 22px; font-weight: 600; letter-spacing: 0.14em; color: #0B1F3A">TESK</a>
+      <nav style="display: flex; align-items: center; gap: 22px; flex: 1; flex-wrap: wrap">
+        <a href="#technology" onClick="{{ goHome }}" style="font-size: 13.5px; color: #1A1A1A" style-hover="color: #6C4DFF">技術</a>
+        <a href="#business" onClick="{{ goHome }}" style="font-size: 13.5px; color: #1A1A1A" style-hover="color: #6C4DFF">事業</a>
+        <a href="#custom" onClick="{{ goHome }}" style="font-size: 13.5px; color: #1A1A1A" style-hover="color: #6C4DFF">開発</a>
+        <a href="#quality" onClick="{{ goHome }}" style="font-size: 13.5px; color: #1A1A1A" style-hover="color: #6C4DFF">品質</a>
+        <a href="#global" onClick="{{ goHome }}" style="font-size: 13.5px; color: #1A1A1A" style-hover="color: #6C4DFF">拠点</a>
+        <a href="#news" onClick="{{ goHome }}" style="font-size: 13.5px; color: #1A1A1A" style-hover="color: #6C4DFF">ニュース</a>
+      </nav>
+      <sc-if value="{{ showLanguageSwitch }}" hint-placeholder-val="{{ true }}">
+        <div style="display: flex; align-items: center; gap: 10px; white-space: nowrap; font-family: 'Inter', sans-serif; font-size: 11.5px; color: #5A6270">
+          <span style="color: #0B1F3A; font-weight: 500">日本語</span>
+          <span style="color: #DCE2EA">|</span>
+          <a href="#top" style="color: #5A6270">English</a>
+          <span style="color: #DCE2EA">|</span>
+          <a href="#top" style="color: #5A6270">中文</a>
+          <span style="color: #DCE2EA">|</span>
+          <a href="#top" style="color: #5A6270">Tiếng Việt</a>
+        </div>
+      </sc-if>
+      <button onClick="{{ goContact }}" style="border: none; cursor: pointer; background: #6C4DFF; color: #ffffff; font-size: 13.5px; font-weight: 500; padding: 12px 24px; border-radius: 100px; white-space: nowrap" style-hover="background: #573BE0">{{ navCtaLabel }}</button>
+    </div>
+  </header>
+
+  <div id="top" style="height: 68px"></div>
+
+  <sc-if value="{{ isHome }}" hint-placeholder-val="{{ true }}">
+  <main>
+
+    <section style="position: relative; overflow: hidden; background: #0B1F3A; padding: 108px 24px 96px">
+      <div style="position: absolute; inset: 0; background: repeating-linear-gradient(115deg, rgba(255,255,255,0.045) 0 2px, transparent 2px 13px)"></div>
+      <div style="position: absolute; top: -180px; right: -120px; width: 680px; height: 680px; borderRadius: 50%; background: radial-gradient(circle, rgba(108,77,255,0.55) 0%, rgba(108,77,255,0.12) 45%, transparent 70%); animation: tskGlow 7s ease-in-out infinite"></div>
+      <div style="position: absolute; bottom: -260px; left: -140px; width: 560px; height: 560px; borderRadius: 50%; background: radial-gradient(circle, rgba(108,77,255,0.28) 0%, transparent 68%)"></div>
+      <div style="position: relative; maxWidth: 1240px; margin: 0 auto; display: flex; flex-direction: column; gap: 34px">
+        <div style="font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.26em; color: #B9A9FF">LIGHT-CURING RESIN MANUFACTURER</div>
+        <h1 style="margin: 0; font-family: 'Noto Serif JP', serif; font-weight: 300; font-size: clamp(38px, 6vw, 74px); line-height: 1.22; letter-spacing: 0.02em; color: #ffffff; max-width: 15em">光で、つなぐ。守る。彩る。</h1>
+        <p style="margin: 0; font-family: 'Inter', sans-serif; font-size: clamp(14px, 1.5vw, 18px); font-weight: 400; line-height: 1.5; color: rgba(255,255,255,0.78); max-width: 32em">Custom Light-Curing Resins, Formulated for Your Application.</p>
+        <p style="margin: 0; font-size: 15px; line-height: 2; color: rgba(255,255,255,0.82); max-width: 40em">テスクは光硬化樹脂の配合技術をもとに、電子部品からジェルネイルまで、お客様ごとに最適な樹脂を開発するメーカーです。</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 14px; margin-top: 6px">
+          <button onClick="{{ goContact }}" style="border: none; cursor: pointer; background: #6C4DFF; color: #ffffff; font-size: 15px; font-weight: 500; padding: 17px 38px; border-radius: 100px; box-shadow: rgba(108,77,255,0.35) 0px 10px 34px 0px" style-hover="background: #573BE0">開発のご相談</button>
+          <a href="#business" style="border: 1.5px solid rgba(255,255,255,0.55); color: #ffffff; font-size: 15px; font-weight: 500; padding: 15.5px 36px; border-radius: 100px; white-space: nowrap" style-hover="border-color: #ffffff; background: rgba(255,255,255,0.08)">事業を見る</a>
+        </div>
+      </div>
+      <div style="position: absolute; right: 24px; bottom: 18px; font-family: ui-monospace, 'SFMono-Regular', monospace; font-size: 10.5px; letter-spacing: 0.04em; color: rgba(255,255,255,0.4)">[ 背景写真：UV光に照らされた樹脂の雫（マクロ）]</div>
+    </section>
+
+    <section style="background: #ffffff; borderBottom: 1px solid #E3E7ED">
+      <div style="maxWidth: 1240px; margin: 0 auto; padding: 56px 24px 60px">
+        <div style="font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.26em; color: #6C4DFF; margin-bottom: 34px">NUMBERS</div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 32px">
+          <div style="display: flex; flex-direction: column; gap: 10px">
+            <div style="font-family: 'Inter', sans-serif; font-size: clamp(40px, 4.6vw, 62px); font-weight: 400; line-height: 1; color: #0B1F3A; letter-spacing: -0.02em">1998</div>
+            <div style="font-size: 13.5px; color: #5A6270">創業</div>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 10px">
+            <div style="font-family: 'Inter', sans-serif; font-size: clamp(40px, 4.6vw, 62px); font-weight: 400; line-height: 1; color: #0B1F3A; letter-spacing: -0.02em">2,000<span style="color: #6C4DFF">+</span></div>
+            <div style="font-size: 13.5px; color: #5A6270">UV硬化樹脂のラインナップ</div>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 10px">
+            <div style="font-family: 'Inter', sans-serif; font-size: clamp(40px, 4.6vw, 62px); font-weight: 400; line-height: 1; color: #0B1F3A; letter-spacing: -0.02em">3</div>
+            <div style="font-size: 13.5px; color: #5A6270">拠点国（日本・中国・ベトナム）</div>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 10px">
+            <div style="font-family: 'Inter', sans-serif; font-size: clamp(40px, 4.6vw, 62px); font-weight: 400; line-height: 1; color: #0B1F3A; letter-spacing: -0.02em">100kg<span style="color: #6C4DFF">+</span></div>
+            <div style="font-size: 13.5px; color: #5A6270">少量試作から大量生産まで対応</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="technology" style="background: #F4F6F9">
+      <div style="maxWidth: 1240px; margin: 0 auto; padding: 104px 24px">
+        <div style="font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.26em; color: #6C4DFF; margin-bottom: 26px">TECHNOLOGY</div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 56px; align-items: start">
+          <h2 style="margin: 0; font-family: 'Noto Serif JP', serif; font-weight: 300; font-size: clamp(30px, 3.6vw, 46px); line-height: 1.38; letter-spacing: 0.01em; color: #0B1F3A">ひとつの技術、<br />ふたつのフィールド。</h2>
+          <p style="margin: 0; font-size: 15px; line-height: 2.1; color: #1A1A1A">液体の樹脂が、光を当てた瞬間に固まる。テスクはこの光硬化技術を25年以上磨いてきました。電子基板を湿気や衝撃から守るコーティングも、爪を美しく保つジェルネイルも、求められる性能は同じです。この配合ノウハウこそが、テスクの核です。</p>
+        </div>
+
+        <div style="margin-top: 72px; background: #ffffff; border: 1px solid #E9EDF3; border-radius: 16px; padding: 48px 32px; box-shadow: rgba(0,0,0,0.05) 0px 1px 10px 0px">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 24px; align-items: center">
+            <div style="display: flex; flex-direction: column; gap: 8px; align-items: center; text-align: center; padding: 26px 18px; border: 1px solid #E3E7ED; border-radius: 12px">
+              <div style="font-family: 'Inter', sans-serif; font-size: 10.5px; letter-spacing: 0.22em; color: #5A6270">INDUSTRIAL</div>
+              <div style="font-size: 16px; font-weight: 500; color: #0B1F3A">工業用コーティング</div>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 10px; align-items: center; text-align: center; padding: 34px 20px; background: #0B1F3A; border-radius: 12px; position: relative; overflow: hidden">
+              <div style="position: absolute; inset: 0; background: radial-gradient(circle at 50% 0%, rgba(108,77,255,0.5), transparent 70%)"></div>
+              <div style="position: relative; font-family: 'Inter', sans-serif; font-size: 10.5px; letter-spacing: 0.22em; color: #B9A9FF">LIGHT-CURING TECHNOLOGY</div>
+              <div style="position: relative; font-size: 20px; font-weight: 500; color: #ffffff; letter-spacing: 0.04em">光硬化技術</div>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 8px; align-items: center; text-align: center; padding: 26px 18px; border: 1px solid #E3E7ED; border-radius: 12px; background: #EDE7F8">
+              <div style="font-family: 'Inter', sans-serif; font-size: 10.5px; letter-spacing: 0.22em; color: #5A6270">BEAUTY</div>
+              <div style="font-size: 16px; font-weight: 500; color: #0B1F3A">ジェルネイル</div>
+            </div>
+          </div>
+
+          <div style="margin-top: 44px; padding-top: 40px; borderTop: 1px solid #E9EDF3; display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 28px">
+            <div style="display: flex; flex-direction: column; gap: 12px">
+              <div style="width: 26px; height: 26px; border: 1.2px solid #6C4DFF; border-radius: 6px"></div>
+              <div style="font-size: 15px; font-weight: 500; color: #0B1F3A">密着性</div>
+              <div style="font-family: 'Inter', sans-serif; font-size: 11.5px; letter-spacing: 0.1em; color: #5A6270">ADHESION</div>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 12px">
+              <div style="width: 26px; height: 26px; border: 1.2px solid #6C4DFF; border-radius: 50%"></div>
+              <div style="font-size: 15px; font-weight: 500; color: #0B1F3A">硬化スピード</div>
+              <div style="font-family: 'Inter', sans-serif; font-size: 11.5px; letter-spacing: 0.1em; color: #5A6270">CURING SPEED</div>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 12px">
+              <div style="width: 26px; height: 26px; border: 1.2px solid #6C4DFF; border-radius: 6px; transform: rotate(45deg)"></div>
+              <div style="font-size: 15px; font-weight: 500; color: #0B1F3A">硬さと柔軟性</div>
+              <div style="font-family: 'Inter', sans-serif; font-size: 11.5px; letter-spacing: 0.1em; color: #5A6270">DURABILITY &amp; FLEXIBILITY</div>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 12px">
+              <div style="width: 26px; height: 26px; border: 1.2px solid #6C4DFF; border-radius: 50%; background: rgba(108,77,255,0.12)"></div>
+              <div style="font-size: 15px; font-weight: 500; color: #0B1F3A">透明性</div>
+              <div style="font-family: 'Inter', sans-serif; font-size: 11.5px; letter-spacing: 0.1em; color: #5A6270">CLARITY</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="business" style="background: #ffffff">
+      <div style="maxWidth: 1240px; margin: 0 auto; padding: 104px 24px">
+        <div style="font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.26em; color: #6C4DFF; margin-bottom: 24px">BUSINESS</div>
+        <h2 style="margin: 0 0 56px; font-family: 'Noto Serif JP', serif; font-weight: 300; font-size: clamp(28px, 3.2vw, 42px); line-height: 1.4; color: #0B1F3A">ふたつの事業。</h2>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(330px, 1fr)); gap: 32px">
+
+          <article style="border: 1px solid #E9EDF3; border-radius: 16px; overflow: hidden; background: #ffffff; display: flex; flex-direction: column">
+            <div style="height: 240px; background: #F4F6F9; background-image: repeating-linear-gradient(135deg, rgba(11,31,58,0.07) 0 2px, transparent 2px 12px); display: flex; align-items: flex-end; padding: 16px">
+              <span style="font-family: ui-monospace, 'SFMono-Regular', monospace; font-size: 10.5px; white-space: nowrap; color: #5A6270">[ 写真：電子基板 ]</span>
+            </div>
+            <div style="padding: 36px 32px 40px; display: flex; flex-direction: column; gap: 26px; flex: 1">
+              <div style="display: flex; flex-direction: column; gap: 8px">
+                <div style="font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.22em; color: #0B1F3A">INDUSTRIAL</div>
+                <h3 style="margin: 0; font-size: 22px; font-weight: 500; line-height: 1.5; color: #0B1F3A">工業用接着剤・コーティング剤</h3>
+              </div>
+              <p style="margin: 0; font-size: 14.5px; line-height: 2; color: #1A1A1A">精密電子部品や光学部品の組立・保護に使われる接着剤、コーティング剤、ポッティング剤を開発・製造しています。</p>
+              <div style="display: flex; flex-direction: column; gap: 12px">
+                <div style="font-family: 'Inter', sans-serif; font-size: 10.5px; letter-spacing: 0.18em; color: #5A6270">PRODUCT CATEGORY</div>
+                <div style="display: flex; flex-wrap: wrap; gap: 8px">
+                  <span style="display: inline-flex; white-space: nowrap; font-size: 12.5px; color: #0B1F3A; border: 1px solid #DCE2EA; border-radius: 4px; padding: 6px 10px">紫外線硬化性樹脂</span>
+                  <span style="display: inline-flex; white-space: nowrap; font-size: 12.5px; color: #0B1F3A; border: 1px solid #DCE2EA; border-radius: 4px; padding: 6px 10px">嫌気硬化性樹脂</span>
+                  <span style="display: inline-flex; white-space: nowrap; font-size: 12.5px; color: #0B1F3A; border: 1px solid #DCE2EA; border-radius: 4px; padding: 6px 10px">可視光硬化性樹脂</span>
+                  <span style="display: inline-flex; white-space: nowrap; font-size: 12.5px; color: #0B1F3A; border: 1px solid #DCE2EA; border-radius: 4px; padding: 6px 10px">一液性エポキシ樹脂</span>
+                  <span style="display: inline-flex; white-space: nowrap; font-size: 12.5px; color: #0B1F3A; border: 1px solid #DCE2EA; border-radius: 4px; padding: 6px 10px">二液性エポキシ樹脂</span>
+                  <span style="display: inline-flex; white-space: nowrap; font-size: 12.5px; color: #0B1F3A; border: 1px solid #DCE2EA; border-radius: 4px; padding: 6px 10px">硬化促進プライマー</span>
+                  <span style="display: inline-flex; white-space: nowrap; font-size: 12.5px; color: #0B1F3A; border: 1px solid #DCE2EA; border-radius: 4px; padding: 6px 10px">剥離洗浄剤</span>
+                  <span style="display: inline-flex; white-space: nowrap; font-size: 12.5px; color: #0B1F3A; border: 1px solid #DCE2EA; border-radius: 4px; padding: 6px 10px">紫外線ランプ</span>
+                </div>
+              </div>
+              <div style="display: flex; flex-direction: column; gap: 12px">
+                <div style="font-family: 'Inter', sans-serif; font-size: 10.5px; letter-spacing: 0.18em; color: #5A6270">APPLICATIONS</div>
+                <div style="display: flex; flex-wrap: wrap; gap: 8px">
+                  <span style="display: inline-flex; white-space: nowrap; font-size: 12.5px; color: #5A6270; background: #F4F6F9; border-radius: 4px; padding: 6px 10px">基板保護コーティング</span>
+                  <span style="display: inline-flex; white-space: nowrap; font-size: 12.5px; color: #5A6270; background: #F4F6F9; border-radius: 4px; padding: 6px 10px">カメラモジュール</span>
+                  <span style="display: inline-flex; white-space: nowrap; font-size: 12.5px; color: #5A6270; background: #F4F6F9; border-radius: 4px; padding: 6px 10px">センサー部品</span>
+                  <span style="display: inline-flex; white-space: nowrap; font-size: 12.5px; color: #5A6270; background: #F4F6F9; border-radius: 4px; padding: 6px 10px">光学レンズ</span>
+                  <span style="display: inline-flex; white-space: nowrap; font-size: 12.5px; color: #5A6270; background: #F4F6F9; border-radius: 4px; padding: 6px 10px">光ファイバー</span>
+                  <span style="display: inline-flex; white-space: nowrap; font-size: 12.5px; color: #5A6270; background: #F4F6F9; border-radius: 4px; padding: 6px 10px">ディスプレイ</span>
+                </div>
+              </div>
+              <a href="#custom" style="margin-top: auto; font-family: 'Inter', sans-serif; font-size: 13.5px; font-weight: 500; color: #6C4DFF; border-bottom: 1px solid rgba(108,77,255,0.35); align-self: flex-start; padding-bottom: 3px">工業用製品を見る →</a>
+            </div>
+          </article>
+
+          <article style="border: 1px solid #E4DCF5; border-radius: 16px; overflow: hidden; background: #EDE7F8; display: flex; flex-direction: column">
+            <div style="height: 240px; background: #E2D8F3; background-image: repeating-linear-gradient(135deg, rgba(11,31,58,0.07) 0 2px, transparent 2px 12px); display: flex; align-items: flex-end; padding: 16px">
+              <span style="font-family: ui-monospace, 'SFMono-Regular', monospace; font-size: 10.5px; white-space: nowrap; color: #5A6270">[ 写真：ジェルネイル ]</span>
+            </div>
+            <div style="padding: 36px 32px 40px; display: flex; flex-direction: column; gap: 26px; flex: 1">
+              <div style="display: flex; flex-direction: column; gap: 8px">
+                <div style="font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.22em; color: #6C4DFF">BEAUTY</div>
+                <h3 style="margin: 0; font-size: 22px; font-weight: 500; line-height: 1.5; color: #0B1F3A">ジェルネイルOEM</h3>
+              </div>
+              <p style="margin: 0; font-size: 14.5px; line-height: 2; color: #1A1A1A">工業用樹脂で培った品質基準で、ジェルネイルを自社開発しています。クリアジェル、カラージェル、機能性ジェルまで幅広くそろえており、テスクの製品だけでオリジナルブランドを立ち上げることができます。</p>
+              <div style="display: flex; flex-direction: column; gap: 14px">
+                <div style="font-family: 'Inter', sans-serif; font-size: 10.5px; letter-spacing: 0.18em; color: #5A6270">FEATURES</div>
+                <div style="display: flex; flex-direction: column; gap: 12px">
+                  <div style="display: flex; align-items: flex-start; gap: 12px"><span style="flex: 0 0 auto; margin-top: 4px; width: 18px; height: 18px; border-radius: 50%; background: #6C4DFF; color: #ffffff; font-size: 10px; display: flex; align-items: center; justify-content: center">✓</span><span style="flex: 1; min-width: 0; font-size: 14.5px; line-height: 1.7; color: #1A1A1A">全製品が自社開発</span></div>
+                  <div style="display: flex; align-items: flex-start; gap: 12px"><span style="flex: 0 0 auto; margin-top: 4px; width: 18px; height: 18px; border-radius: 50%; background: #6C4DFF; color: #ffffff; font-size: 10px; display: flex; align-items: center; justify-content: center">✓</span><span style="flex: 1; min-width: 0; font-size: 14.5px; line-height: 1.7; color: #1A1A1A">小ロットOEM対応</span></div>
+                  <div style="display: flex; align-items: flex-start; gap: 12px"><span style="flex: 0 0 auto; margin-top: 4px; width: 18px; height: 18px; border-radius: 50%; background: #6C4DFF; color: #ffffff; font-size: 10px; display: flex; align-items: center; justify-content: center">✓</span><span style="flex: 1; min-width: 0; font-size: 14.5px; line-height: 1.7; color: #1A1A1A">処方のカスタマイズ</span></div>
+                  <div style="display: flex; align-items: flex-start; gap: 12px"><span style="flex: 0 0 auto; margin-top: 4px; width: 18px; height: 18px; border-radius: 50%; background: #6C4DFF; color: #ffffff; font-size: 10px; display: flex; align-items: center; justify-content: center">✓</span><span style="flex: 1; min-width: 0; font-size: 14.5px; line-height: 1.7; color: #1A1A1A">ブランド立ち上げ支援</span></div>
+                </div>
+              </div>
+              <a href="#contact" onClick="{{ goContactBeauty }}" style="margin-top: auto; font-family: 'Inter', sans-serif; font-size: 13.5px; font-weight: 500; color: #6C4DFF; border-bottom: 1px solid rgba(108,77,255,0.35); align-self: flex-start; padding-bottom: 3px">OEMについて見る →</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="custom" style="background: #F4F6F9">
+      <div style="maxWidth: 1240px; margin: 0 auto; padding: 104px 24px">
+        <div style="font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.26em; color: #6C4DFF; margin-bottom: 24px">CUSTOM DEVELOPMENT</div>
+        <h2 style="margin: 0 0 22px; font-family: 'Noto Serif JP', serif; font-weight: 300; font-size: clamp(30px, 3.6vw, 46px); line-height: 1.38; color: #0B1F3A">既製品で合わないなら、つくる。</h2>
+        <p style="margin: 0; font-size: 15px; line-height: 2.1; color: #1A1A1A; max-width: 44em">用途、基材、硬化条件。お客様ごとに異なる条件に合わせて、最適な樹脂を一から設計します。</p>
+
+        <div style="margin-top: 60px; display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 16px">
+          <div style="background: #ffffff; border: 1px solid #E3E7ED; border-radius: 12px; padding: 30px 24px 32px; display: flex; flex-direction: column; gap: 14px">
+            <div style="font-family: 'Inter', sans-serif; font-size: 34px; font-weight: 400; line-height: 1; color: #6C4DFF">01</div>
+            <div style="font-size: 16px; font-weight: 500; color: #0B1F3A">ヒアリング</div>
+            <div style="font-size: 13px; line-height: 1.9; color: #5A6270">用途、基材、硬化条件、課題を伺います</div>
+            <div style="margin-top: auto; padding-top: 12px; font-family: 'Inter', sans-serif; font-size: 11.5px; letter-spacing: 0.08em; color: #0B1F3A">約1週間</div>
+          </div>
+          <div style="background: #ffffff; border: 1px solid #E3E7ED; border-radius: 12px; padding: 30px 24px 32px; display: flex; flex-direction: column; gap: 14px">
+            <div style="font-family: 'Inter', sans-serif; font-size: 34px; font-weight: 400; line-height: 1; color: #6C4DFF">02</div>
+            <div style="font-size: 16px; font-weight: 500; color: #0B1F3A">配合設計</div>
+            <div style="font-size: 13px; line-height: 1.9; color: #5A6270">2,000種以上の知見から処方を設計します</div>
+            <div style="margin-top: auto; padding-top: 12px; font-family: 'Inter', sans-serif; font-size: 11.5px; letter-spacing: 0.08em; color: #0B1F3A">約2〜3週間</div>
+          </div>
+          <div style="background: #ffffff; border: 1px solid #E3E7ED; border-radius: 12px; padding: 30px 24px 32px; display: flex; flex-direction: column; gap: 14px">
+            <div style="font-family: 'Inter', sans-serif; font-size: 34px; font-weight: 400; line-height: 1; color: #6C4DFF">03</div>
+            <div style="font-size: 16px; font-weight: 500; color: #0B1F3A">サンプル提供</div>
+            <div style="font-size: 13px; line-height: 1.9; color: #5A6270">評価用サンプルをお届けします</div>
+            <div style="margin-top: auto; padding-top: 12px; font-family: 'Inter', sans-serif; font-size: 11.5px; letter-spacing: 0.08em; color: #0B1F3A">約1週間</div>
+          </div>
+          <div style="background: #ffffff; border: 1px solid #E3E7ED; border-radius: 12px; padding: 30px 24px 32px; display: flex; flex-direction: column; gap: 14px">
+            <div style="font-family: 'Inter', sans-serif; font-size: 34px; font-weight: 400; line-height: 1; color: #6C4DFF">04</div>
+            <div style="font-size: 16px; font-weight: 500; color: #0B1F3A">評価・改良</div>
+            <div style="font-size: 13px; line-height: 1.9; color: #5A6270">評価結果をもとに調整を重ねます</div>
+            <div style="margin-top: auto; padding-top: 12px; font-family: 'Inter', sans-serif; font-size: 11.5px; letter-spacing: 0.08em; color: #0B1F3A">随時</div>
+          </div>
+          <div style="background: #ffffff; border: 1px solid #E3E7ED; border-radius: 12px; padding: 30px 24px 32px; display: flex; flex-direction: column; gap: 14px">
+            <div style="font-family: 'Inter', sans-serif; font-size: 34px; font-weight: 400; line-height: 1; color: #6C4DFF">05</div>
+            <div style="font-size: 16px; font-weight: 500; color: #0B1F3A">量産</div>
+            <div style="font-size: 13px; line-height: 1.9; color: #5A6270">少量から大量生産まで対応します</div>
+            <div style="margin-top: auto; padding-top: 12px; font-family: 'Inter', sans-serif; font-size: 11.5px; letter-spacing: 0.08em; color: #0B1F3A">要相談</div>
+          </div>
+        </div>
+
+        <div style="margin-top: 56px; display: flex; flex-direction: column; gap: 24px">
+          <div style="font-family: 'Inter', sans-serif; font-size: 10.5px; letter-spacing: 0.22em; color: #5A6270">CASE STUDIES</div>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px">
+            <div style="background: #ffffff; border: 1px solid #E9EDF3; border-radius: 16px; padding: 32px 28px; display: flex; flex-direction: column; gap: 22px; box-shadow: rgba(0,0,0,0.05) 0px 1px 10px 0px">
+              <div style="font-size: 12.5px; font-weight: 500; color: #6C4DFF; letter-spacing: 0.06em">電子部品</div>
+              <div style="display: flex; flex-direction: column; gap: 16px">
+                <div style="display: flex; flex-direction: column; gap: 6px"><span style="font-family: 'Inter', sans-serif; font-size: 10px; letter-spacing: 0.18em; color: #A8B4BF">ISSUE</span><span style="font-size: 14.5px; line-height: 1.8; color: #1A1A1A">硬化後に基板が反る</span></div>
+                <div style="display: flex; flex-direction: column; gap: 6px"><span style="font-family: 'Inter', sans-serif; font-size: 10px; letter-spacing: 0.18em; color: #A8B4BF">PROPOSAL</span><span style="font-size: 14.5px; line-height: 1.8; color: #1A1A1A">低収縮タイプを新規配合</span></div>
+                <div style="display: flex; flex-direction: column; gap: 6px; padding-top: 16px; borderTop: 1px solid #E9EDF3"><span style="font-family: 'Inter', sans-serif; font-size: 10px; letter-spacing: 0.18em; color: #6C4DFF">RESULT</span><span style="font-size: 15px; font-weight: 500; line-height: 1.8; color: #0B1F3A">反りを大幅に低減</span></div>
+              </div>
+            </div>
+            <div style="background: #ffffff; border: 1px solid #E9EDF3; border-radius: 16px; padding: 32px 28px; display: flex; flex-direction: column; gap: 22px; box-shadow: rgba(0,0,0,0.05) 0px 1px 10px 0px">
+              <div style="font-size: 12.5px; font-weight: 500; color: #6C4DFF; letter-spacing: 0.06em">光学部品</div>
+              <div style="display: flex; flex-direction: column; gap: 16px">
+                <div style="display: flex; flex-direction: column; gap: 6px"><span style="font-family: 'Inter', sans-serif; font-size: 10px; letter-spacing: 0.18em; color: #A8B4BF">ISSUE</span><span style="font-size: 14.5px; line-height: 1.8; color: #1A1A1A">接着部が黄変する</span></div>
+                <div style="display: flex; flex-direction: column; gap: 6px"><span style="font-family: 'Inter', sans-serif; font-size: 10px; letter-spacing: 0.18em; color: #A8B4BF">PROPOSAL</span><span style="font-size: 14.5px; line-height: 1.8; color: #1A1A1A">耐光性を高めた透明樹脂を提案</span></div>
+                <div style="display: flex; flex-direction: column; gap: 6px; padding-top: 16px; borderTop: 1px solid #E9EDF3"><span style="font-family: 'Inter', sans-serif; font-size: 10px; letter-spacing: 0.18em; color: #6C4DFF">RESULT</span><span style="font-size: 15px; font-weight: 500; line-height: 1.8; color: #0B1F3A">長期使用でも透明性を維持</span></div>
+              </div>
+            </div>
+            <div style="background: #ffffff; border: 1px solid #E9EDF3; border-radius: 16px; padding: 32px 28px; display: flex; flex-direction: column; gap: 22px; box-shadow: rgba(0,0,0,0.05) 0px 1px 10px 0px">
+              <div style="font-size: 12.5px; font-weight: 500; color: #6C4DFF; letter-spacing: 0.06em">ネイルOEM</div>
+              <div style="display: flex; flex-direction: column; gap: 16px">
+                <div style="display: flex; flex-direction: column; gap: 6px"><span style="font-family: 'Inter', sans-serif; font-size: 10px; letter-spacing: 0.18em; color: #A8B4BF">ISSUE</span><span style="font-size: 14.5px; line-height: 1.8; color: #1A1A1A">独自の質感がほしい</span></div>
+                <div style="display: flex; flex-direction: column; gap: 6px"><span style="font-family: 'Inter', sans-serif; font-size: 10px; letter-spacing: 0.18em; color: #A8B4BF">PROPOSAL</span><span style="font-size: 14.5px; line-height: 1.8; color: #1A1A1A">カラーと粘度を専用処方</span></div>
+                <div style="display: flex; flex-direction: column; gap: 6px; padding-top: 16px; borderTop: 1px solid #E9EDF3"><span style="font-family: 'Inter', sans-serif; font-size: 10px; letter-spacing: 0.18em; color: #6C4DFF">RESULT</span><span style="font-size: 15px; font-weight: 500; line-height: 1.8; color: #0B1F3A">小ロットで新ブランドを立ち上げ</span></div>
+              </div>
+            </div>
+          </div>
+          <button onClick="{{ goContact }}" style="align-self: flex-start; margin-top: 12px; border: none; cursor: pointer; background: #6C4DFF; color: #ffffff; font-size: 15px; font-weight: 500; padding: 17px 38px; border-radius: 100px" style-hover="background: #573BE0">開発について相談する</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="quality" style="background: #ffffff">
+      <div style="maxWidth: 1240px; margin: 0 auto; padding: 104px 24px">
+        <div style="font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.26em; color: #6C4DFF; margin-bottom: 24px">QUALITY</div>
+        <h2 style="margin: 0 0 56px; font-family: 'Noto Serif JP', serif; font-weight: 300; font-size: clamp(30px, 3.6vw, 46px); line-height: 1.38; color: #0B1F3A">確かな品質を、確かな体制で。</h2>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 32px">
+          <div style="display: flex; flex-direction: column; gap: 18px; padding-top: 24px; borderTop: 2px solid #0B1F3A">
+            <div style="width: 24px; height: 24px; border: 1.2px solid #6C4DFF; border-radius: 50%"></div>
+            <p style="margin: 0; font-size: 14.5px; line-height: 2; color: #1A1A1A">お客様のニーズに合った最適な樹脂を提供することを使命とします</p>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 18px; padding-top: 24px; borderTop: 2px solid #0B1F3A">
+            <div style="width: 24px; height: 24px; border: 1.2px solid #6C4DFF; border-radius: 4px"></div>
+            <p style="margin: 0; font-size: 14.5px; line-height: 2; color: #1A1A1A">不良品を作らない・流出させない仕組みづくりに努めます</p>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 18px; padding-top: 24px; borderTop: 2px solid #0B1F3A">
+            <div style="width: 24px; height: 24px; border: 1.2px solid #6C4DFF; border-radius: 4px; transform: rotate(45deg)"></div>
+            <p style="margin: 0; font-size: 14.5px; line-height: 2; color: #1A1A1A">的確な生産管理で納期を遵守します</p>
+          </div>
+        </div>
+
+        <div style="margin-top: 64px; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px">
+          <div style="border: 1px solid #E9EDF3; border-radius: 16px; overflow: hidden">
+            <div style="height: 180px; background: #F4F6F9; background-image: repeating-linear-gradient(135deg, rgba(11,31,58,0.07) 0 2px, transparent 2px 12px); display: flex; align-items: flex-end; padding: 14px"><span style="font-family: ui-monospace, 'SFMono-Regular', monospace; font-size: 10px; color: #5A6270">[ 写真：本社工場 ]</span></div>
+            <div style="padding: 24px 24px 28px; display: flex; flex-direction: column; gap: 8px">
+              <div style="font-size: 17px; font-weight: 500; color: #0B1F3A">本社工場</div>
+              <div style="font-size: 13px; color: #5A6270">東京都八王子市</div>
+            </div>
+          </div>
+          <div style="border: 1px solid #E9EDF3; border-radius: 16px; overflow: hidden">
+            <div style="height: 180px; background: #F4F6F9; background-image: repeating-linear-gradient(135deg, rgba(11,31,58,0.07) 0 2px, transparent 2px 12px); display: flex; align-items: flex-end; padding: 14px"><span style="font-family: ui-monospace, 'SFMono-Regular', monospace; font-size: 10px; color: #5A6270">[ 写真：研究所 ]</span></div>
+            <div style="padding: 24px 24px 28px; display: flex; flex-direction: column; gap: 8px">
+              <div style="font-size: 17px; font-weight: 500; color: #0B1F3A">研究所</div>
+              <div style="font-size: 13px; color: #5A6270">東京都八王子市（本社敷地内）</div>
+            </div>
+          </div>
+          <div style="border: 1px solid #E9EDF3; border-radius: 16px; overflow: hidden">
+            <div style="height: 180px; background: #F4F6F9; background-image: repeating-linear-gradient(135deg, rgba(11,31,58,0.07) 0 2px, transparent 2px 12px); display: flex; align-items: flex-end; padding: 14px"><span style="font-family: ui-monospace, 'SFMono-Regular', monospace; font-size: 10px; color: #5A6270">[ 写真：山梨工場 ]</span></div>
+            <div style="padding: 24px 24px 28px; display: flex; flex-direction: column; gap: 8px">
+              <div style="font-size: 17px; font-weight: 500; color: #0B1F3A">山梨工場</div>
+              <div style="font-size: 13px; color: #5A6270">山梨県上野原市</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="global" style="background: #0B1F3A; position: relative; overflow: hidden">
+      <div style="position: absolute; top: -140px; left: 40%; width: 520px; height: 520px; borderRadius: 50%; background: radial-gradient(circle, rgba(108,77,255,0.32), transparent 70%)"></div>
+      <div style="position: relative; maxWidth: 1240px; margin: 0 auto; padding: 104px 24px">
+        <div style="font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.26em; color: #B9A9FF; margin-bottom: 24px">GLOBAL NETWORK</div>
+        <h2 style="margin: 0 0 20px; font-family: 'Noto Serif JP', serif; font-weight: 300; font-size: clamp(30px, 3.6vw, 46px); line-height: 1.38; color: #ffffff">日本の技術を、アジアから世界へ。</h2>
+        <p style="margin: 0 0 56px; font-family: 'Inter', sans-serif; font-size: 14.5px; line-height: 1.8; color: rgba(255,255,255,0.72); max-width: 42em">We welcome inquiries from overseas. Our technical team supports customers across Asia and beyond.</p>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; align-items: start">
+          <div style="position: relative; border: 1px solid rgba(255,255,255,0.16); border-radius: 16px; background: rgba(255,255,255,0.03); background-image: repeating-linear-gradient(135deg, rgba(255,255,255,0.05) 0 2px, transparent 2px 14px); aspect-ratio: 4 / 3; min-height: 300px">
+            <span style="position: absolute; left: 16px; bottom: 14px; font-family: ui-monospace, 'SFMono-Regular', monospace; font-size: 10px; color: rgba(255,255,255,0.45)">[ 簡易アジア地図 ]</span>
+            <div style="position: absolute; left: 70%; top: 30%; display: flex; align-items: center; gap: 10px">
+              <span style="width: 11px; height: 11px; border-radius: 50%; background: #6C4DFF; box-shadow: 0 0 0 6px rgba(108,77,255,0.25)"></span>
+              <span style="font-family: 'Inter', sans-serif; font-size: 12px; color: #ffffff; letter-spacing: 0.06em">Japan</span>
+            </div>
+            <div style="position: absolute; left: 48%; top: 42%; display: flex; align-items: center; gap: 10px">
+              <span style="width: 11px; height: 11px; border-radius: 50%; background: #6C4DFF; box-shadow: 0 0 0 6px rgba(108,77,255,0.25)"></span>
+              <span style="font-family: 'Inter', sans-serif; font-size: 12px; color: #ffffff; letter-spacing: 0.06em">China</span>
+            </div>
+            <div style="position: absolute; left: 40%; top: 66%; display: flex; align-items: center; gap: 10px">
+              <span style="width: 11px; height: 11px; border-radius: 50%; background: #6C4DFF; box-shadow: 0 0 0 6px rgba(108,77,255,0.25)"></span>
+              <span style="font-family: 'Inter', sans-serif; font-size: 12px; color: #ffffff; letter-spacing: 0.06em">Vietnam</span>
+            </div>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 4px">
+            <div style="padding: 26px 0; borderTop: 1px solid rgba(255,255,255,0.16); display: flex; flex-direction: column; gap: 8px">
+              <div style="font-family: 'Inter', sans-serif; font-size: 11px; letter-spacing: 0.2em; color: #B9A9FF">JAPAN</div>
+              <div style="font-size: 17px; font-weight: 500; color: #ffffff">TESK Co., Ltd.</div>
+              <div style="font-size: 13px; color: rgba(255,255,255,0.7)">本社・研究開発・製造</div>
+            </div>
+            <div style="padding: 26px 0; borderTop: 1px solid rgba(255,255,255,0.16); display: flex; flex-direction: column; gap: 8px">
+              <div style="font-family: 'Inter', sans-serif; font-size: 11px; letter-spacing: 0.2em; color: #B9A9FF">CHINA</div>
+              <div style="font-size: 17px; font-weight: 500; color: #ffffff">上海テスク（上海勇光貿易有限公司）</div>
+              <div style="font-size: 13px; color: rgba(255,255,255,0.7)">販売・技術サポート</div>
+            </div>
+            <div style="padding: 26px 0; borderTop: 1px solid rgba(255,255,255,0.16); borderBottom: 1px solid rgba(255,255,255,0.16); display: flex; flex-direction: column; gap: 8px">
+              <div style="font-family: 'Inter', sans-serif; font-size: 11px; letter-spacing: 0.2em; color: #B9A9FF">VIETNAM</div>
+              <div style="font-size: 17px; font-weight: 500; color: #ffffff">TESK VIETNAM CO., LTD.（ハノイ）</div>
+              <div style="font-size: 13px; color: rgba(255,255,255,0.7)">販売・技術サポート</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="news" style="background: #ffffff">
+      <div style="maxWidth: 1240px; margin: 0 auto; padding: 96px 24px">
+        <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 24px; flex-wrap: wrap; margin-bottom: 40px">
+          <div style="display: flex; flex-direction: column; gap: 18px">
+            <div style="font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.26em; color: #6C4DFF">NEWS</div>
+            <h2 style="margin: 0; font-family: 'Noto Serif JP', serif; font-weight: 300; font-size: clamp(26px, 2.8vw, 36px); line-height: 1.4; color: #0B1F3A">お知らせ</h2>
+          </div>
+          <a href="#news" style="font-family: 'Inter', sans-serif; font-size: 13.5px; font-weight: 500; color: #6C4DFF; border-bottom: 1px solid rgba(108,77,255,0.35); padding-bottom: 3px; white-space: nowrap">一覧を見る →</a>
+        </div>
+        <div style="display: flex; flex-direction: column">
+          <a href="#news" style="display: flex; flex-wrap: wrap; align-items: center; gap: 20px; padding: 26px 4px; borderTop: 1px solid #E9EDF3; color: #1A1A1A" style-hover="background: #F4F6F9">
+            <span style="font-family: 'Inter', sans-serif; font-size: 13px; color: #5A6270; min-width: 92px">2026.09.17</span>
+            <span style="font-size: 11.5px; color: #0B1F3A; border: 1px solid #DCE2EA; border-radius: 4px; padding: 5px 10px; min-width: 76px; text-align: center">お知らせ</span>
+            <span style="font-size: 15px; line-height: 1.7">ウェブサイトをリニューアルしました</span>
+          </a>
+          <a href="#news" style="display: flex; flex-wrap: wrap; align-items: center; gap: 20px; padding: 26px 4px; borderTop: 1px solid #E9EDF3; color: #1A1A1A" style-hover="background: #F4F6F9">
+            <span style="font-family: 'Inter', sans-serif; font-size: 13px; color: #5A6270; min-width: 92px">2026.04.01</span>
+            <span style="font-size: 11.5px; color: #0B1F3A; border: 1px solid #DCE2EA; border-radius: 4px; padding: 5px 10px; min-width: 76px; text-align: center">企業情報</span>
+            <span style="font-size: 15px; line-height: 1.7">新経営体制のお知らせ</span>
+          </a>
+          <a href="#news" style="display: flex; flex-wrap: wrap; align-items: center; gap: 20px; padding: 26px 4px; borderTop: 1px solid #E9EDF3; borderBottom: 1px solid #E9EDF3; color: #1A1A1A" style-hover="background: #F4F6F9">
+            <span style="font-family: 'Inter', sans-serif; font-size: 13px; color: #5A6270; min-width: 92px">2025.03.10</span>
+            <span style="font-size: 11.5px; color: #0B1F3A; border: 1px solid #DCE2EA; border-radius: 4px; padding: 5px 10px; min-width: 76px; text-align: center">企業情報</span>
+            <span style="font-size: 15px; line-height: 1.7">ベトナム・ハノイに現地法人 TESK VIETNAM CO., LTD. を設立しました</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" style="background: #F4F6F9">
+      <div style="maxWidth: 1240px; margin: 0 auto; padding: 104px 24px">
+        <div style="font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.26em; color: #6C4DFF; margin-bottom: 24px">CONTACT</div>
+        <h2 style="margin: 0 0 48px; font-family: 'Noto Serif JP', serif; font-weight: 300; font-size: clamp(30px, 3.6vw, 46px); line-height: 1.38; color: #0B1F3A">樹脂のことなら、まずはご相談ください。</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px">
+          <button onClick="{{ goContactIndustrial }}" style="cursor: pointer; text-align: left; background: #ffffff; border: 1px solid #E9EDF3; border-radius: 16px; padding: 40px 36px; display: flex; flex-direction: column; gap: 16px" style-hover="border-color: #6C4DFF">
+            <span style="font-family: 'Inter', sans-serif; font-size: 10.5px; letter-spacing: 0.2em; color: #5A6270">INDUSTRIAL</span>
+            <span style="font-size: 20px; font-weight: 500; line-height: 1.6; color: #0B1F3A">工業用接着剤・コーティングのご相談 →</span>
+          </button>
+          <button onClick="{{ goContactBeauty }}" style="cursor: pointer; text-align: left; background: #EDE7F8; border: 1px solid #E4DCF5; border-radius: 16px; padding: 40px 36px; display: flex; flex-direction: column; gap: 16px" style-hover="border-color: #6C4DFF">
+            <span style="font-family: 'Inter', sans-serif; font-size: 10.5px; letter-spacing: 0.2em; color: #6C4DFF">BEAUTY</span>
+            <span style="font-size: 20px; font-weight: 500; line-height: 1.6; color: #0B1F3A">ジェルネイルOEMのご相談 →</span>
+          </button>
+        </div>
+        <div style="margin-top: 40px; display: flex; flex-wrap: wrap; align-items: baseline; gap: 12px 32px">
+          <div style="display: flex; align-items: baseline; gap: 14px">
+            <span style="font-family: 'Inter', sans-serif; font-size: 10.5px; letter-spacing: 0.2em; color: #5A6270">TEL</span>
+            <span style="font-family: 'Inter', sans-serif; font-size: clamp(24px, 2.6vw, 34px); font-weight: 400; color: #0B1F3A; letter-spacing: 0.01em">042-XXX-XXXX</span>
+          </div>
+          <span style="font-size: 13px; color: #5A6270">平日 9:00〜17:00</span>
+          <span style="font-family: 'Inter', sans-serif; font-size: 13px; color: #5A6270">English inquiries are welcome.</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  </sc-if>
+
+  <sc-if value="{{ isContact }}" hint-placeholder-val="{{ false }}">
+  <main style="background: #F4F6F9; animation: tskUp .4s ease both">
+    <div style="maxWidth: 1240px; margin: 0 auto; padding: 72px 24px 96px">
+      <div style="font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.26em; color: #6C4DFF; margin-bottom: 22px">CONTACT</div>
+      <h1 style="margin: 0 0 22px; font-family: 'Noto Serif JP', serif; font-weight: 300; font-size: clamp(32px, 4.2vw, 52px); line-height: 1.32; color: #0B1F3A">お問い合わせ</h1>
+      <p style="margin: 0; font-size: 15px; line-height: 2.1; color: #1A1A1A; max-width: 46em">製品選定、カスタム開発、OEMのご相談など、お気軽にお問い合わせください。通常2営業日以内にご返信します。<br /><span style="font-family: 'Inter', sans-serif; color: #5A6270">English inquiries are welcome.</span></p>
+
+      <div style="margin-top: 56px; display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-start">
+        <div style="flex: 1 1 520px; min-width: 300px; background: #ffffff; border: 1px solid #E9EDF3; border-radius: 16px; padding: 44px 40px; box-shadow: rgba(0,0,0,0.05) 0px 1px 10px 0px; display: flex; flex-direction: column; gap: 40px">
+
+          <div style="display: flex; flex-direction: column; gap: 18px">
+            <div style="font-size: 15px; font-weight: 500; color: #0B1F3A">お問い合わせ種別 <span style="color: #6C4DFF">*</span></div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px">
+              <button onClick="{{ selectIndustrial }}" style="{{ indCardStyle }}">
+                <span style="display: flex; align-items: center; gap: 12px">
+                  <span style="{{ indDotStyle }}"></span>
+                  <span style="font-family: 'Inter', sans-serif; font-size: 10.5px; letter-spacing: 0.2em; color: #5A6270">INDUSTRIAL</span>
+                </span>
+                <span style="font-size: 17px; font-weight: 500; line-height: 1.6; color: #0B1F3A">工業用接着剤・コーティング剤</span>
+              </button>
+              <button onClick="{{ selectBeauty }}" style="{{ beautyCardStyle }}">
+                <span style="display: flex; align-items: center; gap: 12px">
+                  <span style="{{ beautyDotStyle }}"></span>
+                  <span style="font-family: 'Inter', sans-serif; font-size: 10.5px; letter-spacing: 0.2em; color: #6C4DFF">BEAUTY</span>
+                </span>
+                <span style="font-size: 17px; font-weight: 500; line-height: 1.6; color: #0B1F3A">ジェルネイルOEM</span>
+              </button>
+            </div>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 24px">
+            <div style="font-family: 'Inter', sans-serif; font-size: 10.5px; letter-spacing: 0.22em; color: #5A6270">YOUR INFORMATION</div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 24px">
+              <label style="display: flex; flex-direction: column; gap: 10px"><span style="font-size: 13.5px; font-weight: 500; color: #0B1F3A">会社名 <span style="color: #6C4DFF">*</span></span><input type="text" placeholder="株式会社◯◯" style="border: 1px solid #DCE2EA; border-radius: 4px; padding: 15px 16px; font-size: 14.5px; color: #1A1A1A; background: #ffffff" style-focus="outline: none; border-color: #6C4DFF" /></label>
+              <label style="display: flex; flex-direction: column; gap: 10px"><span style="font-size: 13.5px; font-weight: 500; color: #0B1F3A">部署名</span><input type="text" placeholder="開発部" style="border: 1px solid #DCE2EA; border-radius: 4px; padding: 15px 16px; font-size: 14.5px; color: #1A1A1A; background: #ffffff" style-focus="outline: none; border-color: #6C4DFF" /></label>
+              <label style="display: flex; flex-direction: column; gap: 10px"><span style="font-size: 13.5px; font-weight: 500; color: #0B1F3A">氏名 <span style="color: #6C4DFF">*</span></span><input type="text" placeholder="山田 太郎" style="border: 1px solid #DCE2EA; border-radius: 4px; padding: 15px 16px; font-size: 14.5px; color: #1A1A1A; background: #ffffff" style-focus="outline: none; border-color: #6C4DFF" /></label>
+              <label style="display: flex; flex-direction: column; gap: 10px"><span style="font-size: 13.5px; font-weight: 500; color: #0B1F3A">国・地域 <span style="color: #6C4DFF">*</span></span>
+                <select style="border: 1px solid #DCE2EA; border-radius: 4px; padding: 15px 16px; font-size: 14.5px; color: #1A1A1A; background: #ffffff" style-focus="outline: none; border-color: #6C4DFF">
+                  <option>日本 / Japan</option>
+                  <option>中国 / China</option>
+                  <option>ベトナム / Vietnam</option>
+                  <option>台湾 / Taiwan</option>
+                  <option>韓国 / Korea</option>
+                  <option>その他 / Other</option>
+                </select>
+              </label>
+              <label style="display: flex; flex-direction: column; gap: 10px"><span style="font-size: 13.5px; font-weight: 500; color: #0B1F3A">メールアドレス <span style="color: #6C4DFF">*</span></span><input type="email" placeholder="name@example.com" style="border: 1px solid #DCE2EA; border-radius: 4px; padding: 15px 16px; font-size: 14.5px; color: #1A1A1A; background: #ffffff" style-focus="outline: none; border-color: #6C4DFF" /></label>
+              <label style="display: flex; flex-direction: column; gap: 10px"><span style="font-size: 13.5px; font-weight: 500; color: #0B1F3A">電話番号</span><input type="tel" placeholder="042-XXX-XXXX" style="border: 1px solid #DCE2EA; border-radius: 4px; padding: 15px 16px; font-size: 14.5px; color: #1A1A1A; background: #ffffff" style-focus="outline: none; border-color: #6C4DFF" /></label>
+            </div>
+          </div>
+
+          <sc-if value="{{ isIndustrial }}" hint-placeholder-val="{{ true }}">
+            <div style="display: flex; flex-direction: column; gap: 28px; padding: 32px 0 0; borderTop: 1px solid #E9EDF3; animation: tskUp .35s ease both">
+              <div style="font-family: 'Inter', sans-serif; font-size: 10.5px; letter-spacing: 0.22em; color: #6C4DFF">INDUSTRIAL DETAILS</div>
+              <div style="display: flex; flex-direction: column; gap: 14px">
+                <span style="font-size: 13.5px; font-weight: 500; color: #0B1F3A">ご相談内容</span>
+                <div style="display: flex; flex-wrap: wrap; gap: 10px">
+                  <label style="display: flex; align-items: center; gap: 8px; border: 1px solid #DCE2EA; border-radius: 100px; padding: 10px 18px; font-size: 13.5px; color: #1A1A1A; cursor: pointer"><input type="radio" name="ind-topic" style="accent-color: #6C4DFF" />新規開発</label>
+                  <label style="display: flex; align-items: center; gap: 8px; border: 1px solid #DCE2EA; border-radius: 100px; padding: 10px 18px; font-size: 13.5px; color: #1A1A1A; cursor: pointer"><input type="radio" name="ind-topic" style="accent-color: #6C4DFF" />既存製品の選定</label>
+                  <label style="display: flex; align-items: center; gap: 8px; border: 1px solid #DCE2EA; border-radius: 100px; padding: 10px 18px; font-size: 13.5px; color: #1A1A1A; cursor: pointer"><input type="radio" name="ind-topic" style="accent-color: #6C4DFF" />既存品の改良</label>
+                  <label style="display: flex; align-items: center; gap: 8px; border: 1px solid #DCE2EA; border-radius: 100px; padding: 10px 18px; font-size: 13.5px; color: #1A1A1A; cursor: pointer"><input type="radio" name="ind-topic" style="accent-color: #6C4DFF" />サンプル依頼</label>
+                  <label style="display: flex; align-items: center; gap: 8px; border: 1px solid #DCE2EA; border-radius: 100px; padding: 10px 18px; font-size: 13.5px; color: #1A1A1A; cursor: pointer"><input type="radio" name="ind-topic" style="accent-color: #6C4DFF" />その他</label>
+                </div>
+              </div>
+              <label style="display: flex; flex-direction: column; gap: 10px"><span style="font-size: 13.5px; font-weight: 500; color: #0B1F3A">用途</span><input type="text" placeholder="例：カメラモジュールの保護コーティング" style="border: 1px solid #DCE2EA; border-radius: 4px; padding: 15px 16px; font-size: 14.5px; color: #1A1A1A" style-focus="outline: none; border-color: #6C4DFF" /></label>
+              <div style="display: flex; flex-direction: column; gap: 14px">
+                <span style="font-size: 13.5px; font-weight: 500; color: #0B1F3A">基材（複数選択可）</span>
+                <div style="display: flex; flex-wrap: wrap; gap: 10px">
+                  <label style="display: flex; align-items: center; gap: 8px; border: 1px solid #DCE2EA; border-radius: 100px; padding: 10px 18px; font-size: 13.5px; color: #1A1A1A; cursor: pointer"><input type="checkbox" style="accent-color: #6C4DFF" />ガラス</label>
+                  <label style="display: flex; align-items: center; gap: 8px; border: 1px solid #DCE2EA; border-radius: 100px; padding: 10px 18px; font-size: 13.5px; color: #1A1A1A; cursor: pointer"><input type="checkbox" style="accent-color: #6C4DFF" />金属</label>
+                  <label style="display: flex; align-items: center; gap: 8px; border: 1px solid #DCE2EA; border-radius: 100px; padding: 10px 18px; font-size: 13.5px; color: #1A1A1A; cursor: pointer"><input type="checkbox" style="accent-color: #6C4DFF" />樹脂</label>
+                  <label style="display: flex; align-items: center; gap: 8px; border: 1px solid #DCE2EA; border-radius: 100px; padding: 10px 18px; font-size: 13.5px; color: #1A1A1A; cursor: pointer"><input type="checkbox" style="accent-color: #6C4DFF" />セラミック</label>
+                  <label style="display: flex; align-items: center; gap: 8px; border: 1px solid #DCE2EA; border-radius: 100px; padding: 10px 18px; font-size: 13.5px; color: #1A1A1A; cursor: pointer"><input type="checkbox" style="accent-color: #6C4DFF" />その他</label>
+                </div>
+              </div>
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 24px">
+                <label style="display: flex; flex-direction: column; gap: 10px"><span style="font-size: 13.5px; font-weight: 500; color: #0B1F3A">硬化方法</span>
+                  <select style="border: 1px solid #DCE2EA; border-radius: 4px; padding: 15px 16px; font-size: 14.5px; color: #1A1A1A; background: #ffffff" style-focus="outline: none; border-color: #6C4DFF"><option>UV</option><option>LED-UV</option><option>可視光</option><option>熱</option><option>常温</option><option>未定</option></select>
+                </label>
+                <label style="display: flex; flex-direction: column; gap: 10px"><span style="font-size: 13.5px; font-weight: 500; color: #0B1F3A">想定数量</span>
+                  <select style="border: 1px solid #DCE2EA; border-radius: 4px; padding: 15px 16px; font-size: 14.5px; color: #1A1A1A; background: #ffffff" style-focus="outline: none; border-color: #6C4DFF"><option>試作のみ</option><option>〜10kg</option><option>10〜100kg</option><option>100kg以上</option><option>未定</option></select>
+                </label>
+              </div>
+              <label style="display: flex; flex-direction: column; gap: 10px"><span style="font-size: 13.5px; font-weight: 500; color: #0B1F3A">現在の課題</span><textarea rows="4" placeholder="硬化後の反り、密着不足、黄変など" style="border: 1px solid #DCE2EA; border-radius: 4px; padding: 15px 16px; font-size: 14.5px; color: #1A1A1A; line-height: 1.8; resize: vertical" style-focus="outline: none; border-color: #6C4DFF"></textarea></label>
+            </div>
+          </sc-if>
+
+          <sc-if value="{{ isBeauty }}" hint-placeholder-val="{{ false }}">
+            <div style="display: flex; flex-direction: column; gap: 28px; padding: 32px 0 0; borderTop: 1px solid #E9EDF3; animation: tskUp .35s ease both">
+              <div style="font-family: 'Inter', sans-serif; font-size: 10.5px; letter-spacing: 0.22em; color: #6C4DFF">GEL NAIL OEM DETAILS</div>
+              <div style="display: flex; flex-direction: column; gap: 14px">
+                <span style="font-size: 13.5px; font-weight: 500; color: #0B1F3A">ブランドの有無</span>
+                <div style="display: flex; flex-wrap: wrap; gap: 10px">
+                  <label style="display: flex; align-items: center; gap: 8px; border: 1px solid #DCE2EA; border-radius: 100px; padding: 10px 18px; font-size: 13.5px; color: #1A1A1A; cursor: pointer"><input type="radio" name="brand" style="accent-color: #6C4DFF" />既存ブランドあり</label>
+                  <label style="display: flex; align-items: center; gap: 8px; border: 1px solid #DCE2EA; border-radius: 100px; padding: 10px 18px; font-size: 13.5px; color: #1A1A1A; cursor: pointer"><input type="radio" name="brand" style="accent-color: #6C4DFF" />新規立ち上げ予定</label>
+                </div>
+              </div>
+              <div style="display: flex; flex-direction: column; gap: 14px">
+                <span style="font-size: 13.5px; font-weight: 500; color: #0B1F3A">希望製品（複数選択可）</span>
+                <div style="display: flex; flex-wrap: wrap; gap: 10px">
+                  <label style="display: flex; align-items: center; gap: 8px; border: 1px solid #DCE2EA; border-radius: 100px; padding: 10px 18px; font-size: 13.5px; color: #1A1A1A; cursor: pointer"><input type="checkbox" style="accent-color: #6C4DFF" />クリアジェル</label>
+                  <label style="display: flex; align-items: center; gap: 8px; border: 1px solid #DCE2EA; border-radius: 100px; padding: 10px 18px; font-size: 13.5px; color: #1A1A1A; cursor: pointer"><input type="checkbox" style="accent-color: #6C4DFF" />カラージェル</label>
+                  <label style="display: flex; align-items: center; gap: 8px; border: 1px solid #DCE2EA; border-radius: 100px; padding: 10px 18px; font-size: 13.5px; color: #1A1A1A; cursor: pointer"><input type="checkbox" style="accent-color: #6C4DFF" />機能性ジェル</label>
+                  <label style="display: flex; align-items: center; gap: 8px; border: 1px solid #DCE2EA; border-radius: 100px; padding: 10px 18px; font-size: 13.5px; color: #1A1A1A; cursor: pointer"><input type="checkbox" style="accent-color: #6C4DFF" />その他</label>
+                </div>
+              </div>
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 24px">
+                <label style="display: flex; flex-direction: column; gap: 10px"><span style="font-size: 13.5px; font-weight: 500; color: #0B1F3A">想定ロット</span>
+                  <select style="border: 1px solid #DCE2EA; border-radius: 4px; padding: 15px 16px; font-size: 14.5px; color: #1A1A1A; background: #ffffff" style-focus="outline: none; border-color: #6C4DFF"><option>〜100本</option><option>100〜500本</option><option>500〜1,000本</option><option>1,000本以上</option><option>未定</option></select>
+                </label>
+                <label style="display: flex; flex-direction: column; gap: 10px"><span style="font-size: 13.5px; font-weight: 500; color: #0B1F3A">販売予定の国・地域</span><input type="text" placeholder="例：日本、台湾、ベトナム" style="border: 1px solid #DCE2EA; border-radius: 4px; padding: 15px 16px; font-size: 14.5px; color: #1A1A1A" style-focus="outline: none; border-color: #6C4DFF" /></label>
+              </div>
+            </div>
+          </sc-if>
+
+          <label style="display: flex; flex-direction: column; gap: 10px; padding-top: 32px; borderTop: 1px solid #E9EDF3"><span style="font-size: 13.5px; font-weight: 500; color: #0B1F3A">お問い合わせ内容</span><textarea rows="6" placeholder="ご相談の背景やご希望をご記入ください" style="border: 1px solid #DCE2EA; border-radius: 4px; padding: 15px 16px; font-size: 14.5px; color: #1A1A1A; line-height: 1.8; resize: vertical" style-focus="outline: none; border-color: #6C4DFF"></textarea></label>
+
+          <div style="display: flex; flex-direction: column; gap: 24px">
+            <label style="display: flex; align-items: flex-start; gap: 12px; font-size: 14px; line-height: 1.8; color: #1A1A1A; cursor: pointer"><input type="checkbox" style="accent-color: #6C4DFF; margin-top: 4px" /><span><a href="#privacy">プライバシーポリシー</a>に同意します <span style="color: #6C4DFF">*</span></span></label>
+            <button onClick="{{ noop }}" style="align-self: flex-start; border: none; cursor: pointer; background: #6C4DFF; color: #ffffff; font-size: 15px; font-weight: 500; padding: 18px 48px; border-radius: 100px; box-shadow: rgba(108,77,255,0.28) 0px 10px 30px 0px" style-hover="background: #573BE0">送信する</button>
+          </div>
+        </div>
+
+        <aside style="flex: 1 1 280px; max-width: 340px; display: flex; flex-direction: column; gap: 4px; background: #ffffff; border: 1px solid #E9EDF3; border-radius: 16px; padding: 32px 28px">
+          <div style="font-family: 'Inter', sans-serif; font-size: 10.5px; letter-spacing: 0.22em; color: #5A6270; margin-bottom: 18px">BY PHONE</div>
+          <div style="font-family: 'Inter', sans-serif; font-size: 26px; font-weight: 400; color: #0B1F3A">042-XXX-XXXX</div>
+          <div style="font-size: 13px; color: #5A6270; margin-bottom: 26px">平日 9:00〜17:00</div>
+          <div style="padding: 22px 0; borderTop: 1px solid #E9EDF3; display: flex; flex-direction: column; gap: 6px">
+            <div style="font-family: 'Inter', sans-serif; font-size: 11px; letter-spacing: 0.18em; color: #6C4DFF">JAPAN</div>
+            <div style="font-size: 14.5px; font-weight: 500; color: #0B1F3A">TESK Co., Ltd.</div>
+            <div style="font-size: 12.5px; line-height: 1.8; color: #5A6270">東京都八王子市下恩方町308-15</div>
+          </div>
+          <div style="padding: 22px 0; borderTop: 1px solid #E9EDF3; display: flex; flex-direction: column; gap: 6px">
+            <div style="font-family: 'Inter', sans-serif; font-size: 11px; letter-spacing: 0.18em; color: #6C4DFF">CHINA</div>
+            <div style="font-size: 14.5px; font-weight: 500; color: #0B1F3A">上海テスク</div>
+            <div style="font-size: 12.5px; line-height: 1.8; color: #5A6270">上海勇光貿易有限公司</div>
+          </div>
+          <div style="padding: 22px 0 0; borderTop: 1px solid #E9EDF3; display: flex; flex-direction: column; gap: 6px">
+            <div style="font-family: 'Inter', sans-serif; font-size: 11px; letter-spacing: 0.18em; color: #6C4DFF">VIETNAM</div>
+            <div style="font-size: 14.5px; font-weight: 500; color: #0B1F3A">TESK VIETNAM CO., LTD.</div>
+            <div style="font-size: 12.5px; line-height: 1.8; color: #5A6270">ハノイ</div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+  </sc-if>
+
+  <footer style="background: #0B1F3A; color: #ffffff">
+    <div style="maxWidth: 1240px; margin: 0 auto; padding: 80px 24px 40px; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 48px">
+      <div style="display: flex; flex-direction: column; gap: 20px">
+        <div style="font-family: 'Inter', sans-serif; font-size: 22px; font-weight: 600; letter-spacing: 0.14em; color: #ffffff">TESK</div>
+        <div style="font-size: 13.5px; line-height: 2; color: rgba(255,255,255,0.72)">株式会社テスク<br />〒192-0154 東京都八王子市下恩方町308-15<br />設立 1998年4月</div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 14px">
+        <div style="font-family: 'Inter', sans-serif; font-size: 10.5px; letter-spacing: 0.22em; color: #B9A9FF">BUSINESS</div>
+        <div style="font-size: 13px; line-height: 2; color: rgba(255,255,255,0.72)">接着剤・コーティング剤・ポッティング剤、樹脂加工品の設計製造販売、UV硬化装置・UVランプの販売</div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 14px">
+        <div style="font-family: 'Inter', sans-serif; font-size: 10.5px; letter-spacing: 0.22em; color: #B9A9FF">SITE MAP</div>
+        <div style="display: flex; flex-direction: column; gap: 10px">
+          <a href="#technology" onClick="{{ goHome }}" style="font-size: 13px; color: rgba(255,255,255,0.78)">技術</a>
+          <a href="#business" onClick="{{ goHome }}" style="font-size: 13px; color: rgba(255,255,255,0.78)">事業</a>
+          <a href="#custom" onClick="{{ goHome }}" style="font-size: 13px; color: rgba(255,255,255,0.78)">開発</a>
+          <a href="#quality" onClick="{{ goHome }}" style="font-size: 13px; color: rgba(255,255,255,0.78)">品質</a>
+          <a href="#global" onClick="{{ goHome }}" style="font-size: 13px; color: rgba(255,255,255,0.78)">拠点</a>
+          <a href="#news" onClick="{{ goHome }}" style="font-size: 13px; color: rgba(255,255,255,0.78)">ニュース</a>
+        </div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 14px">
+        <div style="font-family: 'Inter', sans-serif; font-size: 10.5px; letter-spacing: 0.22em; color: #B9A9FF">GROUP</div>
+        <div style="display: flex; flex-direction: column; gap: 10px">
+          <span style="font-size: 13px; color: rgba(255,255,255,0.78)">上海テスク</span>
+          <span style="font-size: 13px; color: rgba(255,255,255,0.78)">TESK VIETNAM</span>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 18px">
+          <a href="#privacy" style="font-size: 13px; color: rgba(255,255,255,0.78)">プライバシーポリシー</a>
+          <a href="#sitemap" style="font-size: 13px; color: rgba(255,255,255,0.78)">サイトマップ</a>
+        </div>
+      </div>
+    </div>
+    <div style="maxWidth: 1240px; margin: 0 auto; padding: 28px 24px 40px; borderTop: 1px solid rgba(255,255,255,0.14)">
+      <div style="font-family: 'Inter', sans-serif; font-size: 11.5px; color: rgba(255,255,255,0.5)">© 2026 TESK Co., Ltd. All Rights Reserved.</div>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showLanguageSwitch&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Header&quot;},&quot;navCtaLabel&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;お問い合わせ&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Header&quot;},&quot;scrollReveal&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Motion&quot;},&quot;defaultInquiryType&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;工業用接着剤・コーティング剤&quot;,&quot;ジェルネイルOEM&quot;],&quot;default&quot;:&quot;工業用接着剤・コーティング剤&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Contact&quot;}}">
+class Component extends DCLogic {
+  state = { page: 'home', type: 'industrial' };
+
+  go(page, type) {
+    this.setState(s => ({ page, type: type || s.type }));
+    if (page === 'contact') window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  componentDidMount() { this.setupReveal(); }
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.page !== this.state.page) this.setupReveal();
+  }
+
+  setupReveal() {
+    if ((this.props.scrollReveal ?? true) === false) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    if (!CSS.supports('animation-timeline: view()')) return;
+    setTimeout(() => {
+      const sel = 'main section > div > h2, main section > div > p, main section > div > div > h2, main article, main section > div > div > div, main section > div > div > a, main aside, main h1';
+      const nodes = [...document.querySelectorAll(sel)].filter(n => {
+        const r = n.getBoundingClientRect();
+        return r.height > 24 && r.height < 900 && !n.dataset.revealed;
+      });
+      let prevTop = null, i = 0;
+      nodes.forEach(n => {
+        const top = Math.round(n.getBoundingClientRect().top);
+        i = (prevTop === null || Math.abs(top - prevTop) > 24) ? 0 : i + 1;
+        prevTop = top;
+        const off = Math.min(i, 4) * 5;
+        n.dataset.revealed = '1';
+        n.style.animation = 'tskReveal 1s linear both';
+        n.style.animationTimeline = 'view()';
+        n.style.animationRange = 'entry ' + (10 + off) + '% cover ' + (34 + off) + '%';
+      });
+    }, 60);
+  }
+
+  card(active, tinted) {
+    return {
+      cursor: 'pointer', textAlign: 'left', display: 'flex', flexDirection: 'column', gap: '14px',
+      padding: '26px 24px', borderRadius: '16px',
+      background: tinted ? '#EDE7F8' : '#ffffff',
+      border: active ? '1.5px solid #6C4DFF' : '1.5px solid #DCE2EA',
+      boxShadow: active ? 'rgba(108,77,255,0.18) 0px 6px 22px 0px' : 'none',
+      transition: 'border-color .25s ease, box-shadow .25s ease, background .25s ease'
+    };
+  }
+
+  dot(active) {
+    return {
+      width: '16px', height: '16px', borderRadius: '50%', flex: '0 0 auto',
+      border: active ? '5px solid #6C4DFF' : '1.5px solid #A8B4BF',
+      background: '#ffffff', transition: 'border .2s ease'
+    };
+  }
+
+  renderVals() {
+    if (!this._revealInit) { this._revealInit = true; setTimeout(() => this.setupReveal(), 400); }
+    const ind = this.state.type === 'industrial';
+    return {
+      isHome: this.state.page === 'home',
+      isContact: this.state.page === 'contact',
+      isIndustrial: ind,
+      isBeauty: !ind,
+      showLanguageSwitch: this.props.showLanguageSwitch ?? true,
+      navCtaLabel: this.props.navCtaLabel ?? 'お問い合わせ',
+      goHome: () => this.go('home'),
+      goContact: () => this.go('contact', this.props.defaultInquiryType === 'ジェルネイルOEM' ? 'beauty' : 'industrial'),
+      goContactIndustrial: () => this.go('contact', 'industrial'),
+      goContactBeauty: () => this.go('contact', 'beauty'),
+      selectIndustrial: () => this.setState({ type: 'industrial' }),
+      selectBeauty: () => this.setState({ type: 'beauty' }),
+      indCardStyle: this.card(ind, false),
+      beautyCardStyle: this.card(!ind, true),
+      indDotStyle: this.dot(ind),
+      beautyDotStyle: this.dot(!ind),
+      noop: e => e.preventDefault()
+    };
+  }
+}
+</script>
+</body>
+</html>
